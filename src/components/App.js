@@ -1,4 +1,5 @@
 import React from 'react';
+import UserCreate from './UserCreate';
 
 class App extends React.Component {
   state = { language: 'english' };
@@ -9,13 +10,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='ui container'>App
+      <div className='ui container'>
         <div>
           Select a language
-          <i className='flag us' onClick={() => this.onLanguageChange('english')} />
-          <i className='flag jp' onClick={() => this.onLanguageChange('japanese')} />
+          <i
+            className='flag us'
+            onClick={() => this.onLanguageChange('english')}
+          />
+          <i
+            className='flag jp'
+            onClick={() => this.onLanguageChange('japanese')}
+          />
         </div>
-        {this.state.language}
+        <UserCreate />
       </div>
     );
   }
